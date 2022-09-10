@@ -1,0 +1,7 @@
+{
+    "stm32-for-vscode.armToolchainPath": false,
+    "files.associations": {
+        "freertos.h": "c",
+        "portable.h": "c"
+    }
+}
