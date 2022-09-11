@@ -31,10 +31,14 @@ int main(void)
 
 void ledBlinkTask ( void *p )
 {
+    TickType_t xLastWakeTime;
+
+    // Initialise the xLastWakeTime variable with the current time.
+    xLastWakeTime = xTaskGetTickCount();
     for( ;; )
     {
-        vTaskDelay(LEDDELAY);
         GPIOD->ODR ^= (1U << 12);  
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(50));
     }
 }
 

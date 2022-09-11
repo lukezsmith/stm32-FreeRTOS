@@ -94,7 +94,6 @@ target_link_options(${EXECUTABLE} PRIVATE
     -T${MCU_LINKER_SCRIPT}
     ${CPU_PARAMETERS}
     -Wl,-Map=blinky.map
-    --specs=nosys.specs
     --specs=nano.specs
     -Wl,--gc-sections
     -lc)
