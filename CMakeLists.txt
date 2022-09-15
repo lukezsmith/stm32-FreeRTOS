@@ -34,7 +34,6 @@ add_subdirectory(src/modules)
 if(CMAKE_BUILD_TYPE STREQUAL release)
     #  -------- Collate Code Sources --------
     file(GLOB_RECURSE PROJECT_SOURCES "${PROJECT_DIR}/*.c")
-    file(GLOB_RECURSE HAL_SOURCES "${HAL_PATH}/Src/*.c")
     file(GLOB FREERTOS_SOURCES ${RTOS_PATH}/*.c)
     #  -------- Include HAL Sources -------- 
     set(HAL_SOURCES
